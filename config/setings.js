@@ -18,20 +18,13 @@ export default {
   scss: {
     includePaths: ["./node_modules/"],
   },
-  versionNumber: {
-    value: "%DT%",
-    append: {
-      key: "_v",
-      cover: 0,
-      to: ["css", "js"],
-    },
-    output: {
-      file: "version.json",
-    },
+  autoprefixer: {
+    overrideBrowserslist: ["last 8 versions"],
+    grid: true,
   },
-  imagemin:{
+  imagemin: {
     verbose: true,
     interlaced: true,
-	progressive: true
-  }
+    progressive: true,
+  },
 };
