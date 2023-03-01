@@ -9,16 +9,16 @@ export default {
     img: buildFolder + "/img/",
     fonts: buildFolder + "/fonts/",
     icons: buildFolder + "/icons/",
-    favicon: buildFolder + "/favicons/"
+    favicon: buildFolder + "/favicons/",
   },
   src: {
     html: srcFolder + "/*.html",
     css: srcFolder + "/scss/style.scss",
-    js: srcFolder + "/js/script.js",
+    js: srcFolder + "/js/*.js",
     img: srcFolder + "/img/**/*.{jpg,png,webp,svg,gif,ico}",
     fonts: srcFolder + "/fonts/**/*.*",
     icons: srcFolder + "/icons/**/*.*",
-    favicon: srcFolder + "/favicon/favicon.svg"
+    favicon: srcFolder + "/favicon/favicon.svg",
   },
   watch: {
     html: srcFolder + "/**/*.html",
