@@ -18,6 +18,9 @@ export default {
   scss: {
     includePaths: ["./node_modules/"],
   },
+  uglify: {
+    mangle: false,
+  },
   autoprefixer: {
     overrideBrowserslist: ["last 8 versions"],
     grid: true,
