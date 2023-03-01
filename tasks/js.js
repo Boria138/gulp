@@ -1,4 +1,5 @@
 import GulpUglify from "gulp-uglify";
+import GulpRigger from "gulp-rigger";
 
 const js = () => {
   return app.gulp.src(app.path.src.js)
@@ -8,9 +9,10 @@ const js = () => {
         message: "Error: <%= error.message %>"
       })
     ))
+    .pipe(GulpRigger())
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(GulpUglify())
-    .pipe(app.plugins.rename(app.setings.rename))
+    .pipe(app.plugins.rename(app.settings.rename))
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(app.plugins.browserSync.stream())
 }

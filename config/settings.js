@@ -2,7 +2,7 @@ import path from "./path.js";
 
 export default {
   browsersync: {
-    server: { baseDir: path.buildFolder },
+    server: { baseDir: "./" + path.buildFolder },
     notify: false,
     open: false,
   },

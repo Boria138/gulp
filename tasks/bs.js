@@ -1,7 +1,7 @@
 import browsersync from "browser-sync";
 
 const browserSync = () => {
-  browsersync.init(app.setings.browsersync);
+  browsersync.init(app.settings.browsersync);
 };
 
 export default browserSync;

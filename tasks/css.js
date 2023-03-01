@@ -1,5 +1,6 @@
 import groupcssmedia from "gulp-group-css-media-queries";
 import autoPrefixer from "gulp-autoprefixer";
+import cssbeautify from "gulp-cssbeautify";
 import GulpCleanCss from "gulp-clean-css";
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
@@ -16,12 +17,13 @@ const css = () => {
         })
       )
     )
-    .pipe(scss(app.setings.scss))
+    .pipe(scss(app.settings.scss))
     .pipe(groupcssmedia())
-    .pipe(autoPrefixer(app.setings.autoprefixer))
+    .pipe(autoPrefixer(app.settings.autoprefixer))
+    .pipe(cssbeautify())
     .pipe(app.gulp.dest(app.path.build.css))
-    .pipe(GulpCleanCss(app.setings.cleancss))
-    .pipe(app.plugins.rename(app.setings.rename))
+    .pipe(GulpCleanCss(app.settings.cleancss))
+    .pipe(app.plugins.rename(app.settings.rename))
     .pipe(app.gulp.dest(app.path.build.css))
     .pipe(app.plugins.browserSync.stream());
 };
